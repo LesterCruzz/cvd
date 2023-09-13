@@ -553,7 +553,36 @@ img {
   font-size: 4rem;
 }
 
+/* Modile About Banner */
+
+@media screen and (max-width: 500px) {
+  .aboutBanner {
+    padding: 4rem;
+  }
+  .aboutBanner .aboutBanner__wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding-top: 10rem;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  .aboutBanner .aboutBanner__wrapper .aboutBanner__text p {
+    text-align: center;
+  }
+  .aboutBanner .aboutBanner__wrapper .aboutBanner__text h1 {
+    font-size: 7rem;
+  }
+  .aboutBanner .aboutBanner__wrapper .aboutBanner__text ul {
+    justify-content: center;
+    margin-bottom: 4rem;
+  }
+  .aboutBanner .aboutBanner__wrapper .aboutBanner__ellipse {
+    display: none;
+  }
+}
+
 /* About Projects */
+
 .projects {
   background-color: #2b2b2b;
   padding: 8rem;
@@ -564,7 +593,7 @@ img {
   gap: 4rem;
 }
 .projects .container h2 {
-  font-size: 3rem;
+  font-size: 4rem;
   color: #ffa700;
   margin-bottom: 1rem;
   font-weight: bold;
@@ -577,6 +606,7 @@ img {
   border-radius: 2rem;
   background-color: #fff;
   max-width: 35rem;
+  margin-bottom: 4rem;
 }
 .projects .projects__wrapper .cards__text {
   margin: 2rem;
@@ -588,7 +618,74 @@ img {
 .projects .projects__wrapper .cards__text p {
   color: #2b2b2b;
 }
-/* repeatable pattenr */
+
+/* Mobile About Projects */
+
+@media screen and (max-width: 500px) {
+  .projects .container {
+    text-align: center;
+  }
+  .projects .projects__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+}
+
+/* About Services */
+
+.about__services {
+  padding: 8rem;
+}
+.about__services .about__services__wrapper {
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  max-width: 114rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  max-width: 114rem;
+  justify-content: space-around;
+  gap: 30rem;
+}
+.about__services .about__services__wrapper .about__services__text h2 {
+  color: #ffa700;
+  font-size: 4rem;
+  font-weight: bold;
+  max-width: 40rem;
+  margin: 8rem 0 6rem;
+}
+.about__services .about__services__wrapper img {
+  margin-top: 9rem;
+}
+.about__services .about__services__wrapper .about__services__text p {
+  max-width: 40rem;
+  text-align: justify;
+  margin-bottom: 2rem;
+}
+.about__services
+  .about__services__wrapper
+  .about__services__text
+  .services__price {
+  margin: 6rem 0 0;
+  max-width: 15rem;
+}
+.about__services
+  .about__services__wrapper
+  .about__services__text
+  .services__price
+  h3 {
+  font-size: 3rem;
+  color: #ffa700;
+}
+.about__services
+  .about__services__wrapper
+  .about__services__text
+  .services__price
+  p {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+/* repeatable pattern */
 
 .btn {
   display: inline-block;
@@ -617,4 +714,28 @@ img {
 .btn.bg--black:hover {
   background-color: #fff;
   color: #2b2b2b;
+}
+
+.about__services:nth-child(even) {
+  background-color: #2b2b2b;
+}
+
+.about__services:nth-child(even) p {
+  color: #fff;
+}
+
+.about__services:nth-child(even) .about__services__wrapper {
+  flex-direction: row-reverse;
+}
+
+.about__services .chevron {
+  text-align: center;
+}
+.about__services .chevron a i {
+  text-align: center;
+  color: #ffa700;
+  font-size: 4rem;
+}
+.about__services:last-child .chevron {
+  display: none;
 }
